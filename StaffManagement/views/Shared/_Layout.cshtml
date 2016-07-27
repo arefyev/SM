@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="shortcut icon" href="@Url.Content("~/favicon.ico")">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author"/>
+    @Styles.Render("~/bundles/css")
+</head>
+
+@RenderBody()
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/app")
+@RenderSection("scripts", required: false)
+
+<script type="text/javascript">
+    PageManager.ConfigureManager({
+        container: ".content", highlight: CommonResources.highlightMenuItem,
+        pages: [
+            { Group: "Home", Mask: "/Home", RootUrl: "/Page/MainPage" },
+            { Group: "Staff", Mask: "/Staff", RootUrl: "/Page/StaffPage" }
+        ]
+    });
+
+    var hash = window.location.href.split('#')[1];
+    if (hash)
+        PageManager.Navigate(hash);
+    else
+        PageManager.Navigate("/Home");
+</script>
+</html>
