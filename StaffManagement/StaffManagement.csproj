@@ -247,7 +247,6 @@
     <Content Include="Content\Fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Fonts\fontawesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Fonts\fontawesome\fonts\FontAwesome.otf" />
-    <None Include="Project_Readme.html" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Page\MainPage.cshtml" />
